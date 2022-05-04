@@ -1,0 +1,108 @@
+/* Reset browser styles */
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    min-width: 300px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Stilizarea Headeru-lui */
+header {
+    padding: 8px;
+    color: white;
+    background-color: rgb(25, 30, 48);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    gap: 12px;
+}
+
+header nav ul :last-child {
+    margin-right: 12px;
+}
+
+
+
+/* Stilizare Main */
+main {
+    flex-grow: 1;
+}
+
+main .container-curs {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+main .container-curs div {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: gainsboro;
+    margin-top: 12px;
+    cursor: pointer;
+    padding: 4px;
+    box-sizing: border-box;
+    border: 2px dashed cyan;
+    border-radius: 10px;
+}
+
+main .container-curs div:hover {
+    transform: scale(1.1);
+}
+
+main .container-curs div p {
+    font-size: 12px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    background-color: rgb(25, 30, 48);
+    color: white;
+}
+
+/* Media querry */
+@media (max-width: 538px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        text-align: center;
+    }
+
+    header nav ul :last-child {
+        margin-right: 0;
+    }
+
+    footer {
+        display: none;
+    }
+}
